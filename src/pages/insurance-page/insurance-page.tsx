@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { ProgramStep, TravelStep, useStep } from "@/features/policy-form";
+import { FormSummary, ProgramStep, TravelStep, useStep } from "@/features/policy-form";
 import { IconButton } from "@/shared/ui/icon-button";
 import { Stepper } from "@/shared/ui/stepper";
 import styles from "./insurance-page.module.scss";
@@ -29,6 +29,8 @@ export const InsurancePage = () => {
           Не волнуйтесь! Вы можете покинуть сайт и продолжить с этого момента в любое время
         </p>
       </section>
+
+      <FormSummary />
     </main>
   );
 };
