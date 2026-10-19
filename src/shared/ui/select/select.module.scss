@@ -1,27 +1,10 @@
-.wrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
+.select {
+  padding: 0 8px;
   border: 1px solid transparent;
   border-radius: var(--radius-md);
-
-  &:has(.select:disabled) {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-}
-
-.select {
-  width: 100%;
-  height: 100%;
-  padding: 0 28px 0 12px;
-  border: none;
-  background: none;
   font-weight: 500;
   font-size: 11px;
   color: var(--text);
-  appearance: none;
-  outline: none;
   cursor: pointer;
 
   &:has(option[value=""]:checked) {
@@ -29,18 +12,9 @@
   }
 
   &:disabled {
+    opacity: 0.5;
     cursor: not-allowed;
   }
-}
-
-.chevron {
-  position: absolute;
-  right: 10px;
-  width: 12px;
-  height: 12px;
-  color: var(--gray);
-  stroke-width: 3;
-  pointer-events: none;
 }
 
 .filled {
@@ -50,10 +24,6 @@
 .outline {
   border-color: var(--gray);
   background-color: var(--white);
-}
-
-.wrapper:hover:not(:has(.select:disabled)) .chevron {
-  color: var(--accent);
 }
 
 .error {

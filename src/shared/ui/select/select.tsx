@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { ChevronDown } from "lucide-react";
 import type { SelectHTMLAttributes } from "react";
 import styles from "./select.module.scss";
 
@@ -22,27 +21,21 @@ export const Select = ({
   ...props
 }: Props) => {
   return (
-    <div
-      className={clsx(
-        styles.wrapper,
-        styles[variant],
-        error && styles.error,
-        className,
-      )}
+    <select
+      className={clsx(styles.select, styles[variant], error && styles.error, className)}
+      aria-invalid={error}
+      {...props}
     >
-      <select className={styles.select} aria-invalid={error} {...props}>
-        {placeholder && (
-          <option value="" disabled>
-            {placeholder}
-          </option>
-        )}
-        {options.map((option, index) => (
-          <option key={index} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      <ChevronDown className={styles.chevron} />
-    </div>
+      {placeholder && (
+        <option value="" disabled>
+          {placeholder}
+        </option>
+      )}
+      {options.map((option, index) => (
+        <option key={index} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </select>
   );
 };
