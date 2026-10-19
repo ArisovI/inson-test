@@ -1,0 +1,24 @@
+.date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.day {
+  width: 56px;
+  height: 100%;
+}
+
+.month {
+  width: 107px;
+  height: 100%;
+}
+
+.year {
+  width: 72px;
+  height: 100%;
+}
+
+.calendar {
+  margin-left: 5px;
+}

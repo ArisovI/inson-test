@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 12px 11px 11px;
+  border: 1px solid var(--disabled);
+  border-radius: var(--radius-md);
+  background-color: var(--gray-light);
+  cursor: pointer;
+
+  &:has(.input:checked) {
+    border-color: var(--white);
+    background-color: var(--white);
+    box-shadow: 0 0 5px 3px rgb(0 0 0 / 0.1);
+
+    .circle {
+      background-color: var(--primary);
+    }
+
+    .title,
+    .subtitle {
+      color: var(--primary);
+    }
+  }
+
+  &:hover:not(:has(.input:checked, .input:disabled)) {
+    border-color: var(--gray);
+  }
+
+  &:has(.input:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  color: var(--white);
+
+  svg {
+    width: 8px;
+    height: 8px;
+    stroke-width: 3;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--accent);
+}

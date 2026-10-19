@@ -1,0 +1,15 @@
+.stepper {
+  display: flex;
+  gap: 6px;
+}
+
+.step {
+  width: 56px;
+  height: 7px;
+  border-radius: 20px;
+  background-color: var(--gray-light);
+}
+
+.active {
+  background-color: var(--primary);
+}

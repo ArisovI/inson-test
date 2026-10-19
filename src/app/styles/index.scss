@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #00c55c;
+  --primary-hover: #00b052;
+  --primary-active: #009c49;
+  --accent: #001e80;
+  --white: #ffffff;
+  --text: #444444;
+  --disabled: #c4c4c4;
+  --gray: #b6b3c4;
+  --gray-light: #f1eff5;
+  --error: #e5484d;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}

@@ -1,0 +1,23 @@
+@use "@/shared/theme/mixins" as *;
+
+.phone {
+  display: flex;
+  gap: 7px;
+}
+
+.code {
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.number {
+  @include field;
+
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+.error {
+  border-color: var(--error);
+}

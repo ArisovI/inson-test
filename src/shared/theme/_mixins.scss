@@ -1,0 +1,29 @@
+@mixin disabled {
+  &:disabled {
+    border-color: transparent;
+    background-color: var(--disabled);
+    color: var(--white);
+    cursor: not-allowed;
+  }
+}
+
+@mixin field {
+  padding: 0 12px;
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--text);
+  outline: none;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

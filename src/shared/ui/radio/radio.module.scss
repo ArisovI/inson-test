@@ -1,0 +1,54 @@
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  color: var(--white);
+
+  svg {
+    width: 8px;
+    height: 8px;
+    stroke-width: 3;
+  }
+}
+
+.input:checked + .circle {
+  background-color: var(--primary);
+}
+
+.radio:hover .input:not(:checked, :disabled) + .circle {
+  filter: brightness(0.9);
+}
+
+.input:focus-visible + .circle {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.radio:has(.input:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

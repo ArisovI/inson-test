@@ -1,0 +1,48 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: var(--gray-light);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 412px;
+  padding: 14px 12px 20px 30px;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: 315px;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--text);
+}
+
+.noteIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  font-size: 8px;
+  color: var(--white);
+}

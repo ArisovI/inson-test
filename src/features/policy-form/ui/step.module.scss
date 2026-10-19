@@ -1,0 +1,13 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 18px;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--accent);
+}
